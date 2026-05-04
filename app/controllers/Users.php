@@ -140,7 +140,9 @@
                         //create session 
                         die('SUCCESSSSSSSS');
                     } else {
+                        //die('daefsf');
                         $data['password_err'] = 'Invalid password';
+                        $this->view('users/login', $data);
                     }
                 } else {
                     //load view with errors
