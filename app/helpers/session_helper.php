@@ -26,12 +26,10 @@
         }
     }
 
-    // function flash('register_success', 'You are now registered and can log in', 'alert alert-success'){
-    //     //die(var_dump($_SESSION));
-    //     if(!empty($name)){
-    //         if(true && true){
-    //             $_SESSION[$name] = 'You are now registered and can log in';
-    //             $_SESSION[$name. '_class'] =  'alert alert-success';
-    //         }   
-    //     }
-    // }
+    function isLoggedIn(){
+        if(isset($_SESSION['user_id'])){
+            return true;
+        } else {
+            return false;
+        }
+    }
