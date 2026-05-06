@@ -64,6 +64,7 @@
 
         //nak execute prepared statement
         public function execute(){
+            //die('wdjgvwdu');
             return $this->stmt->execute();
         }
 

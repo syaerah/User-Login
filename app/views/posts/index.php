@@ -9,4 +9,12 @@
             </a>
         </div>
     </div>
+    <?php foreach($data['posts'] as $post) : ?>
+        <div class="card card-body mb-3">
+            <h4 class="card-title"><?php echo $post->title; ?></h4>
+            <div class="bg-light p-2 mb-3">
+                Written by <?php echo $post->name; ?>
+            </div>
+        </div>
+    <?php endforeach; ?>
 <?php require APPROOT . '/views/inc/footer.php'; ?>

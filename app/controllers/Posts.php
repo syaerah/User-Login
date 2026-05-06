@@ -1,14 +1,22 @@
 <?php
     class Posts extends Controller{
         public function __construct(){
-            if(!isLoggedIn()){
-                redirect('users/login');
-            }
+        if(!isLoggedIn()){
+            redirect('users/login');
         }
 
-        public function index(){
-            $data = [];
+        $this->postModel = $this->model('Post');
+        }
 
-            $this->view('posts/index', $data);
+    public function index(){
+        //get posts
+        
+        $posts = $this->postModel->getPosts();
+
+        $data = [
+            'posts' => $posts
+        ];
+        
+        $this->view('posts/index', $data);
         }
     }
