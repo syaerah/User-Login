@@ -8,7 +8,7 @@
         $this->postModel = $this->model('Post');
         }
 
-    public function index(){
+        public function index(){
         //get posts
         
         $posts = $this->postModel->getPosts();
@@ -19,4 +19,15 @@
         
         $this->view('posts/index', $data);
         }
+
+        public function add(){
+        $data = [
+            'title' => '',
+            'body' => ''
+        ];
+        
+        $this->view('posts/add', $data);
+        }
     }
+
+    

@@ -5,6 +5,9 @@
 
         }
         public function index(){
+            if(isLoggedIn()){
+                redirect('posts');
+            }
             $data = [
                 'title' => 'User Login',
                 'description' => 'Simple user authentication built on this framework'
