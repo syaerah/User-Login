@@ -9,7 +9,9 @@
         public function getPosts(){
             $this->db->query('SELECT *,
                             posts.id as postId,
-                            users.id as userId
+                            users.id as userId,
+                            posts.create_at as postCreate,
+                            users.create_at as userCreate
                             FROM posts
                             INNER JOIN users
                             ON posts.user_id = users.id
