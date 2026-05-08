@@ -8,7 +8,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="<?php echo URLROOT; ?>">Home</a>
+            <a class="nav-link" href="<?php echo URLROOT; ?>">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo URLROOT; ?>/pages/about">About</a>
@@ -18,11 +18,14 @@
         <ul class="navbar-nav ml-auto">
           <?php if(isset($_SESSION['user_id'])) : ?>
             <li class="nav-item">
+              <a class="nav-link" href="#">Haluu <?php echo $_SESSION['user_name']; ?></a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="<?php echo URLROOT; ?>/users/logout">Log Out</a>
             </li>
           <?php else : ?>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="<?php echo URLROOT; ?>/users/register">Register</a>
+              <a class="nav-link" href="<?php echo URLROOT; ?>/users/register">Register</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo URLROOT; ?>/users/login">Login</a>
