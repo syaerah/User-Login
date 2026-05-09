@@ -29,7 +29,7 @@
                 $data['email_err'] = 'Please enter email';
             } else {
                 //check email
-                if($this->userModel->findByEmail($data['email'])){
+                if($this->userModel->findUserByEmail($data['email'])){
                     $data['email_err'] = 'Email already exists';
                 }
             

@@ -26,13 +26,13 @@
                         <span class="invalid-feedback"><?php echo $data['confirm_password_err']; ?></span>
                     </div>
 
-                    <div class="row">
-                        <div class="col">
-                            <input type="submit" value="Register" class="btn btn-success btn-block">
-                        </div>
-                        <div class="col">
-                            <a href="<?php echo URLROOT; ?>/users/login" class="btn btn-light btn-block">Have an account? Login</a>
-                        </div>
+                    <div class="d-flex gap-3 mt-3">
+                        <button type="submit" class="btn btn-success flex-fill py-2">
+                            Register
+                        </button>
+                        <a href="<?php echo URLROOT; ?>/users/login" class="btn btn-outline-secondary py-2 text-center">
+                            Have an account? Login
+                        </a>
                     </div>
                 </form>     
             </div>

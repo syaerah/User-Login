@@ -10,7 +10,7 @@
             }
             $data = [
                 'title' => 'User Login',
-                'description' => 'Simple user authentication built on this framework'
+                'description' => 'Basic user authentication system with post-sharing functionality. Built as my first project using this framework. I’m Caerah, currently exploring PHP and still learning, so I’m open to any guidance, feedback, or suggestions for improvement.'
             ];
             
             $this->view('pages/index', $data);
