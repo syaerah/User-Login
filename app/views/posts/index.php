@@ -1,5 +1,18 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-    <?php flash('post_message'); ?>
+
+    <?php if(isset($_SESSION['post_message'])) : ?>
+        <div class="position-fixed top-0 start-50 translate-middle-x p-3" style="z-index: 1055;">
+            <div id="liveToast" class="toast show align-items-center text-bg-success border-0" role="alert">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        <?php echo $_SESSION['post_message']; ?>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                </div>
+            </div>
+        </div>
+        <?php unset($_SESSION['post_message']); ?>
+    <?php endif; ?>
 
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4">
 
@@ -12,12 +25,17 @@
     </div>
     <?php foreach($data['posts'] as $post) : ?>
         <div class="card card-body mb-3">
-            <h4 class="card-title"><?php echo $post->title; ?></h4>
-            <div class="bg-light p-2 mb-3">
-                Written by <?php echo $post->name; ?> on <?php echo $post->postCreate; ?>
+            <h2 class="card-title"><?php echo $post->title; ?></h2>
+            <div class="bg-light px-2 py-1 mb-2 d-inline-block rounded">
+                <span class="fs-6">
+                    Written by <?php echo $post->name; ?> on <?php echo $post->postCreate; ?>
+                </span>
             </div>
-            <p class="card-text"><?php echo $post->body; ?></p>
-            <a href="<?php echo URLROOT; ?>/posts/show/<?php echo $post->postId; ?>" class="btn btn-dark">More</a>
+                <p class="card-text mb-1 mt-2"
+                    style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                    <?php echo htmlspecialchars($post->body); ?>
+                </p>
+            <a href="<?php echo URLROOT; ?>/posts/show/<?php echo $post->postId; ?>" class="btn btn-dark mb-1 mt-2">More</a>
         </div>
     <?php endforeach; ?>
 <?php require APPROOT . '/views/inc/footer.php'; ?>
