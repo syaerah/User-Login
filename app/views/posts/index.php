@@ -1,14 +1,14 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
     <?php flash('post_message'); ?>
-    <div class="row">
-        <div class="col-md-6">
-            <h1>TULIS PATTTT</h1>
-        </div>
-        <div class="col-md-6">
-            <a href="<?php echo URLROOT; ?>/posts/add" class="btn btn-success pull-right">
-                <i class="fa fa-plus"></i> Add Post
-            </a>
-        </div>
+
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4">
+
+        <h1 class="mb-3 mt-4">
+            Apa yang perlu Caerah perbaiki?</h1>
+
+        <a href="<?php echo URLROOT; ?>/posts/add" class="btn btn-success align-self-start align-self-md-center">
+            <i class="fa-solid fa-pencil"></i> Add Post
+        </a>
     </div>
     <?php foreach($data['posts'] as $post) : ?>
         <div class="card card-body mb-3">

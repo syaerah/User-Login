@@ -1,6 +1,6 @@
     </div>
 
-    <footer class="custom-footer text-center py-3 mt-5">
+    <footer class="custom-footer text-center py-3 mt-auto">
         <p class="mb-0">
             Copyright &copy; <?php echo date('Y'); ?>
             <?php echo SITENAME; ?>
