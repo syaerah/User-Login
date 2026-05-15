@@ -28,7 +28,7 @@
             <h2 class="card-title"><?php echo $post->title; ?></h2>
             <div class="bg-light px-2 py-1 mb-2 d-inline-block rounded">
                 <span class="fs-6">
-                    Written by <?php echo $post->name; ?> on <?php echo $post->postCreate; ?>
+                    Written by <?php echo $post->is_anonymous ? 'Anonymous' : $post->name; ?> on <?php echo $post->postCreate; ?>
                 </span>
             </div>
                 <p class="card-text mb-1 mt-2"

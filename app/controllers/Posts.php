@@ -32,7 +32,8 @@
                     'body' => trim($_POST['body']),
                     'user_id' => $_SESSION['user_id'],
                     'title_err' => '',
-                    'body_err' => '' 
+                    'body_err' => '' ,
+                    'is_anonymous' => isset($_POST['is_anonymous']) ? 1 : 0
                 ];
 
                 //validate title

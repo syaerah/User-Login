@@ -5,7 +5,7 @@
         <div class="d-flex justify-content-between align-items-start mb-3">
             <h1><?php echo $data['post']->title; ?></h1>
             <div class="d-flex justify-content-end p-2 mb-3">
-                Written by <?php echo $data['user']->name; ?><br><?php echo $data['post']->create_at; ?>
+                Written by <?php echo $data['post']->is_anonymous ? 'Anonymous' : $data['user']->name; ?><br><?php echo $data['post']->create_at; ?>
             </div>
         </div>
         <div class="mt-3 fs-6 lh-lg">
