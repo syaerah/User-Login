@@ -14,6 +14,12 @@
                 <textarea name="body" class="form-control form-control-lg <?php echo (!empty($data ['body_err'])) ? 'is-invalid' : ''; ?>"><?php echo $data['body']; ?></textarea>
                 <span class="invalid-feedback"><?php echo $data['body_err']; ?></span>
             </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="is_anonymous" id="is_anonymous" value="1">
+                <label class="form-check-label" for="is_anonymous">
+                    Post as <strong>Anonymous</strong>
+                </label>    
+            </div>
             <div class="d-flex justify-content-end">
                 <input type="submit" class="btn btn-success mb-3 mt-4" value="Submit">
             </div>

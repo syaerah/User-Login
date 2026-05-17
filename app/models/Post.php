@@ -45,6 +45,7 @@
             $this->db->bind(':id', $data['id']);
             $this->db->bind(':title', $data['title']);
             $this->db->bind(':body', $data['body']);
+            $this->db->bind(':is_anonymous', $data['is_anonymous']);
 
             //execute
             if($this->db->execute()){
